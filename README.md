@@ -79,3 +79,26 @@ boot.img-hashtype  boot.img-os_patch_level  boot.img-ramdisk_offset
 replace boot.img-kernel with the bootable "Image" and pack everything using `mkbootimg`
 
 boot.img crafted like this can be later flashed using `odin` / `odin4` / `heimdall`
+
+## Changes
+
+### KernelSU:
+
+Unfortunately, in order to make KernelSU working, i had to disable some of the standard samsung security features,
+
+this is a common practice, and I may try to restore some of the disabled features in the upcoming updates
+
+The following configurations were disabled from config:
+
+- CONFIG_UH (Samsung micro-hypervisor)
+- CONFIG_UH_LKMAUTH
+- CONFIG_UH_LKM_BLOCK
+
+- CONFIG_RKP (Samsung Runtime Kernel Protection)
+- CONFIG_RKP_CFP (Samsung RKP: Code Flow Protection)
+
+- CONFIG_KPROBES (KProbes did not work for me, used manual integration instead)
+
+Added:
+
+- CONFIG_KSU (KernelSU manual integration)
