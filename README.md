@@ -6,15 +6,7 @@ with KernelSU and some minor features embedded,
 
 configured specifically for Samsung N975F d2s, but it should work without any major changes on
 
-any samsung device based on exynos9820/exynos9825 CPU e.g.
-
-- SM-G970F
-- SM-G973F
-- SM-G975F
-- SM-G977B
-- SM-N970F
-- SM-N975F
-- SM-N976B
+any samsung device based on exynos9820/exynos9825 CPU
 
 (If it does not, please reach out to me via github issue, maybe i will be able to help)
 
